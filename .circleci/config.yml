@@ -19,8 +19,7 @@ jobs:
             apk add --update --no-cache \
               py3-pip
             pip install \
-              docker-compose==3.8 \
-              awscli==1.11.76
+              docker-compose
     
       - run:
           name: Build application Docker image
