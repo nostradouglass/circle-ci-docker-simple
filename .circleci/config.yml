@@ -13,13 +13,13 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - run:
-          name: Install dependencies
-          command: |
-            apk add --update --no-cache \
-              py3-pip
-            pip install \
-              docker-compose
+      # - run:
+      #     name: Install dependencies
+      #     command: |
+      #       apk add --update --no-cache \
+      #         py3-pip
+      #       pip install \
+      #         docker-compose
     
       - run:
           name: Build application Docker image
