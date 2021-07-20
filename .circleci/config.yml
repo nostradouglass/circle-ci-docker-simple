@@ -22,9 +22,13 @@ jobs:
       #       pip install \
       #         docker-compose
       - run:
-          name: Install Docker Compose
+          name: Install pip
           command: |
             apk add --update py3-pip
+    
+     - run:
+          name: Install Docker Compose
+          command: |
             pip install docker-compose
     
     
