@@ -9,7 +9,8 @@ jobs:
     # working_directory: /
     docker:
       #- image: docker:17.05.0-ce-git
-      - image: docker:20.10.7
+      - image: docker:18.06.3-ce-git
+
     steps:
       - checkout
       - setup_remote_docker
@@ -23,9 +24,9 @@ jobs:
       - run:
           name: Install Docker Compose
           command: |
-            curl -L https://github.com/docker/compose/releases/download/1.25.3/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
-            chmod +x ~/docker-compose
-            sudo mv ~/docker-compose /usr/local/bin/docker-compose
+            apk add --update py3-pip
+            pip install docker-compose
+    
     
       - run:
           name: Build application Docker image
