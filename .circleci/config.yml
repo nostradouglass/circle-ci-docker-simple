@@ -19,7 +19,7 @@ jobs:
       - run:
           name: Build application Docker image
           command: |
-            docker build -t kellydouglass/circle-ci-docker-simple
+            docker build -t kellydouglass/circle-ci-docker-simple .
       
       - run:
           name: Run tests
