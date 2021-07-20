@@ -17,13 +17,12 @@ jobs:
       - run:
           name: Install pip3
           command: |
-            apk add py3-pip \
-            pip3 install --upgrade pip
+            apk add py3-pip
     
-      - run:
-          name: Install Docker Compose
-          command: |
-            pip3 install docker-compose
+      # - run:
+      #     name: Install Docker Compose
+      #     command: |
+      #       pip3 install docker-compose
     
     
       - run:
