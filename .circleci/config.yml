@@ -1,6 +1,9 @@
 version: 2
 jobs:
   build:
+    branches:
+      only:
+        - main
     # working_directory: /
     docker:
       - image: docker:17.05.0-ce-git
