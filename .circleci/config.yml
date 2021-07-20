@@ -14,17 +14,11 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      # - run:
-      #     name: Install dependencies
-      #     command: |
-      #       apk add --update --no-cache \
-      #         py3-pip
-      #       pip install \
-      #         docker-compose
       - run:
-          name: Install pip
+          name: Install pip3
           command: |
-            apk add py3-pip
+            apk add py3-pip \
+            pip3 install --upgrade pip3
     
       - run:
           name: Install Docker Compose
