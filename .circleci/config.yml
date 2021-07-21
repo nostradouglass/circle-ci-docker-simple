@@ -67,15 +67,15 @@ workflows:
   build_and_test:
     jobs:
       - testOnlyOnFeatureBranches:
-        filters:
-          branches:
-            ignore:
-              - main
-              - master
+          filters:
+            branches:
+              ignore:
+                - main
+                - master
       - testAndDeployOnMain:
-        filters:
-          branches:
-            only:
-              - main
-              - master
+          filters:
+            branches:
+              only:
+                - main
+                - master
           
