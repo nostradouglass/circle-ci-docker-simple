@@ -1,11 +1,6 @@
 version: 2
 jobs:
   testOnlyOnFeatureBranches:
-    # filters:
-    #   branches:
-    #     ignore:
-    #       - main
-    #       - master
     resource_class: small
     docker:
       - image: docker:18.06.3-ce-git
@@ -23,11 +18,7 @@ jobs:
             docker run -e CI=true kellydouglass/circle-ci-docker-simple npm run test
 
   testAndDeployOnMain:
-    # filters:
-    #   branches:
-    #     only:
-    #       - main
-    #       - master
+
     resource_class: small
     docker:
       - image: docker:18.06.3-ce-git
